@@ -1,0 +1,44 @@
+{
+  "name": "next-tailwind-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "format": "prettier --write './**/*.+(js|jsx|json|md|tsx|ts|gql|css)'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^9.3.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.23",
+    "@zeit/next-css": "^1.0.1",
+    "autoprefixer": "^9.7.4",
+    "cssnano": "^4.1.10",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
+    "next-purgecss": "^3.1.2",
+    "postcss-easy-import": "^3.0.0",
+    "prettier": "^1.19.1",
+    "tailwindcss": "^1.2.0",
+    "typescript": "^3.8.3"
+  },
+  "lint-staged": {
+    "*.{js|jsx|tsx|ts|gql|css|md|json}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}
